@@ -1,0 +1,659 @@
+2026-02-23 00:12:11.051 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:12:11.052 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:12:11.526 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:12:11.529 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:12:11.548 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:12:11.553 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:12:11.554 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:12:11.565 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:12:11.565 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:12:11.667 [trade-worker-20] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1002 symbol=AAPL wanted=10 have=0
+2026-02-23 00:12:11.668 [trade-worker-15] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=NVDA wanted=10 have=0
+2026-02-23 00:12:11.668 [trade-worker-12] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1005 symbol=INFY wanted=100 have=0
+2026-02-23 00:12:11.667 [trade-worker-3] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=AAPL wanted=20 have=0
+2026-02-23 00:12:11.667 [trade-worker-16] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1006 symbol=RELIANCE wanted=25 have=0
+2026-02-23 00:12:11.694 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:12:11.707 [trade-worker-4] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:12:11.711 [trade-worker-23] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:12:11.763 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 198ms — Accepted: 42, Rejected: 8, Errors: 0
+2026-02-23 00:12:11.768 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:12:11.914 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:12:11.914 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:12:11.914 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:12:11.916 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:12:11.932 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:13:27.812 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:13:27.814 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:13:28.193 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:13:28.197 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:13:28.200 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:13:28.203 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:13:28.205 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:13:28.215 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:13:28.215 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:13:28.310 [trade-worker-15] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=NVDA wanted=10 have=30
+2026-02-23 00:13:28.310 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1003 symbol=MSFT wanted=50 have=0
+2026-02-23 00:13:28.310 [trade-worker-12] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1005 symbol=INFY wanted=100 have=0
+2026-02-23 00:13:28.328 [trade-worker-5] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #5: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(5 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 5, 720.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:04', TIMESTAMP '2026-02-23 00:12:11.728569')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.334 [trade-worker-12] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #12: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(12 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 100, 1452.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1005 symbol=INFY requested=100', TIMESTAMP '2026-02-20 09:15:10', TIMESTAMP '2026-02-23 00:12:11.687993')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.336 [trade-worker-15] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #15: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(15 AS BIGINT), CAST(1001 AS BIGINT), 'NVDA', 10, 682.500000, 'SELL', 'REJECTED', 'Insufficient position: account=1001 symbol=NVDA requested=10', TIMESTAMP '2026-02-20 09:15:12', TIMESTAMP '2026-02-23 00:12:11.688992')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.336 [trade-worker-9] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #9: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(9 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 50, 411.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:07', TIMESTAMP '2026-02-23 00:12:11.693736')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.338 [trade-worker-1] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #1: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(1 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 50, 182.450000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:01', TIMESTAMP '2026-02-23 00:12:11.703981')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.340 [trade-worker-6] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #6: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(6 AS BIGINT), CAST(1002 AS BIGINT), 'GOOGL', 5, 2755.500000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:05', TIMESTAMP '2026-02-23 00:12:11.697634')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.341 [trade-worker-10] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #10: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(10 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 5, 721.500000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:08', TIMESTAMP '2026-02-23 00:12:11.699373')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.343 [trade-worker-3] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #3: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(3 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 20, 183.100000, 'SELL', 'REJECTED', 'Insufficient position: account=1001 symbol=AAPL requested=20', TIMESTAMP '2026-02-20 09:15:03', TIMESTAMP '2026-02-23 00:12:11.690002')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.343 [trade-worker-3] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:13:28.345 [trade-worker-16] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #16: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(16 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 25, 2845.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1006 symbol=RELIANCE requested=25', TIMESTAMP '2026-02-20 09:15:12', TIMESTAMP '2026-02-23 00:12:11.68699')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.346 [trade-worker-20] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #20: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(20 AS BIGINT), CAST(1002 AS BIGINT), 'AAPL', 10, 184.100000, 'SELL', 'REJECTED', 'Insufficient position: account=1002 symbol=AAPL requested=10', TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.687993')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.349 [trade-worker-7] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #7: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(7 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 200, 1450.750000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:05', TIMESTAMP '2026-02-23 00:12:11.705646')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.350 [trade-worker-19] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #19: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(19 AS BIGINT), CAST(1010 AS BIGINT), 'AAPL', 100, 184.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.728569')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.353 [trade-worker-17] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #17: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(17 AS BIGINT), CAST(1008 AS BIGINT), 'ICICIBANK', 90, 980.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:13', TIMESTAMP '2026-02-23 00:12:11.72395')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.355 [trade-worker-4] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #4: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(4 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 100, 410.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:03', TIMESTAMP '2026-02-23 00:12:11.706728')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.356 [trade-worker-4] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:13:28.357 [trade-worker-23] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #23: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(23 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.170000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.711563')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.360 [trade-worker-14] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #14: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(14 AS BIGINT), CAST(1007 AS BIGINT), 'HDFCBANK', 60, 1650.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:11', TIMESTAMP '2026-02-23 00:12:11.68598')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.361 [trade-worker-14] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:13:28.363 [trade-worker-13] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #13: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(13 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 75, 2850.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:10', TIMESTAMP '2026-02-23 00:12:11.722835')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.366 [trade-worker-18] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #18: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(18 AS BIGINT), CAST(1009 AS BIGINT), 'TCS', 40, 4100.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:13', TIMESTAMP '2026-02-23 00:12:11.709038')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.368 [trade-worker-22] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #22: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(22 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.160000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.721196')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.370 [trade-worker-11] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #11: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(11 AS BIGINT), CAST(1002 AS BIGINT), 'AAPL', 15, 182.900000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:09', TIMESTAMP '2026-02-23 00:12:11.72596')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.370 [trade-worker-2] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #2: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(2 AS BIGINT), CAST(1002 AS BIGINT), 'GOOGL', 10, 2750.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:02', TIMESTAMP '2026-02-23 00:12:11.717835')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.376 [trade-worker-8] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #8: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(8 AS BIGINT), CAST(1001 AS BIGINT), 'NVDA', 30, 680.100000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:06', TIMESTAMP '2026-02-23 00:12:11.7011')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.382 [trade-worker-21] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #21: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(21 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.150000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.715601')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.387 [trade-worker-24] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #24: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(24 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.180000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.713364')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.393 [trade-worker-21] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #47: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(47 AS BIGINT), CAST(1009 AS BIGINT), 'TCS', 10, 4105.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:31', TIMESTAMP '2026-02-23 00:12:11.730369')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.397 [trade-worker-8] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #46: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(46 AS BIGINT), CAST(1008 AS BIGINT), 'ICICIBANK', 100, 982.500000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:30', TIMESTAMP '2026-02-23 00:12:11.735344')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.402 [trade-worker-2] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #45: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(45 AS BIGINT), CAST(1007 AS BIGINT), 'HDFCBANK', 30, 1655.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:29', TIMESTAMP '2026-02-23 00:12:11.735344')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.406 [trade-worker-11] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #44: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(44 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 40, 2860.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:28', TIMESTAMP '2026-02-23 00:12:11.738142')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.411 [trade-worker-22] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #43: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(43 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 50, 1455.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:27', TIMESTAMP '2026-02-23 00:12:11.738142')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.416 [trade-worker-18] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #42: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(42 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 15, 723.500000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:26', TIMESTAMP '2026-02-23 00:12:11.741288')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.421 [trade-worker-13] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #41: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(41 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 200, 413.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:25', TIMESTAMP '2026-02-23 00:12:11.741288')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.423 [trade-worker-14] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #40: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(40 AS BIGINT), CAST(1020 AS BIGINT), 'TCS', 25, 4102.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1020 symbol=TCS requested=25', TIMESTAMP '2026-02-20 09:15:24', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.425 [trade-worker-23] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #39: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(39 AS BIGINT), CAST(1019 AS BIGINT), 'ICICIBANK', 70, 981.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:23', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.428 [trade-worker-4] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #38: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(38 AS BIGINT), CAST(1018 AS BIGINT), 'HDFCBANK', 50, 1652.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1018 symbol=HDFCBANK requested=50', TIMESTAMP '2026-02-20 09:15:22', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.432 [trade-worker-17] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #37: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(37 AS BIGINT), CAST(1017 AS BIGINT), 'RELIANCE', 100, 2855.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:21', TIMESTAMP '2026-02-23 00:12:11.747591')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.436 [trade-worker-19] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #36: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(36 AS BIGINT), CAST(1016 AS BIGINT), 'INFY', 300, 1453.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:20', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.440 [trade-worker-7] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #35: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(35 AS BIGINT), CAST(1015 AS BIGINT), 'TSLA', 8, 722.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:19', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.445 [trade-worker-20] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #34: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(34 AS BIGINT), CAST(1014 AS BIGINT), 'MSFT', 120, 412.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:18', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.448 [trade-worker-16] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #33: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(33 AS BIGINT), CAST(1013 AS BIGINT), 'NVDA', 60, 681.750000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:17', TIMESTAMP '2026-02-23 00:12:11.751707')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.450 [trade-worker-3] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #32: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(32 AS BIGINT), CAST(1012 AS BIGINT), 'AMZN', 15, 3301.500000, 'SELL', 'REJECTED', 'Insufficient position: account=1012 symbol=AMZN requested=15', TIMESTAMP '2026-02-20 09:15:16', TIMESTAMP '2026-02-23 00:12:11.751707')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.455 [trade-worker-10] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #31: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(31 AS BIGINT), CAST(1011 AS BIGINT), 'AMZN', 20, 3300.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:15', TIMESTAMP '2026-02-23 00:12:11.753718')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.461 [trade-worker-6] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #30: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(30 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.240000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.690701')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.464 [trade-worker-1] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #29: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(29 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.230000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.755728')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.467 [trade-worker-9] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #28: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(28 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.220000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.756735')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.470 [trade-worker-15] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #27: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(27 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.210000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.758522')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.474 [trade-worker-12] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #26: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(26 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.200000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.758522')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.478 [trade-worker-5] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #25: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(25 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.190000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.761515')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.481 [trade-worker-8] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #50: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(50 AS BIGINT), CAST(1012 AS BIGINT), 'NVDA', 25, 685.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:34', TIMESTAMP '2026-02-23 00:12:11.763438')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.486 [trade-worker-21] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #49: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(49 AS BIGINT), CAST(1011 AS BIGINT), 'AMZN', 5, 3305.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:33', TIMESTAMP '2026-02-23 00:12:11.763438')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.489 [trade-worker-24] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #48: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(48 AS BIGINT), CAST(1010 AS BIGINT), 'AAPL', 50, 185.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:32', TIMESTAMP '2026-02-23 00:12:11.730369')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:28.491 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 276ms — Accepted: 0, Rejected: 0, Errors: 50
+2026-02-23 00:13:28.495 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:13:28.623 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:13:28.624 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:13:28.624 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:13:28.626 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:13:28.845 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:13:40.330 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:13:40.333 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:13:40.761 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:13:40.761 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:13:40.768 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:13:40.773 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:13:40.775 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:13:40.786 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:13:40.786 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:13:40.861 [trade-worker-12] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1005 symbol=INFY wanted=100 have=0
+2026-02-23 00:13:40.862 [trade-worker-10] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1004 symbol=TSLA wanted=5 have=0
+2026-02-23 00:13:40.861 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1003 symbol=MSFT wanted=50 have=0
+2026-02-23 00:13:40.879 [trade-worker-8] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #8: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(8 AS BIGINT), CAST(1001 AS BIGINT), 'NVDA', 30, 680.100000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:06', TIMESTAMP '2026-02-23 00:12:11.7011')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.881 [trade-worker-9] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #9: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(9 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 50, 411.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:07', TIMESTAMP '2026-02-23 00:12:11.693736')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.885 [trade-worker-12] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #12: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(12 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 100, 1452.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1005 symbol=INFY requested=100', TIMESTAMP '2026-02-20 09:15:10', TIMESTAMP '2026-02-23 00:12:11.687993')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.887 [trade-worker-10] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #10: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(10 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 5, 721.500000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:08', TIMESTAMP '2026-02-23 00:12:11.699373')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.890 [trade-worker-6] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #6: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(6 AS BIGINT), CAST(1002 AS BIGINT), 'GOOGL', 5, 2755.500000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:05', TIMESTAMP '2026-02-23 00:12:11.697634')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.894 [trade-worker-22] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #22: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(22 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.160000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.721196')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.897 [trade-worker-3] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #3: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(3 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 20, 183.100000, 'SELL', 'REJECTED', 'Insufficient position: account=1001 symbol=AAPL requested=20', TIMESTAMP '2026-02-20 09:15:03', TIMESTAMP '2026-02-23 00:12:11.690002')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.900 [trade-worker-16] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #16: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(16 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 25, 2845.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1006 symbol=RELIANCE requested=25', TIMESTAMP '2026-02-20 09:15:12', TIMESTAMP '2026-02-23 00:12:11.68699')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.900 [trade-worker-16] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:13:40.902 [trade-worker-15] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #15: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(15 AS BIGINT), CAST(1001 AS BIGINT), 'NVDA', 10, 682.500000, 'SELL', 'REJECTED', 'Insufficient position: account=1001 symbol=NVDA requested=10', TIMESTAMP '2026-02-20 09:15:12', TIMESTAMP '2026-02-23 00:12:11.688992')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.904 [trade-worker-20] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #20: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(20 AS BIGINT), CAST(1002 AS BIGINT), 'AAPL', 10, 184.100000, 'SELL', 'REJECTED', 'Insufficient position: account=1002 symbol=AAPL requested=10', TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.687993')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.905 [trade-worker-24] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #24: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(24 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.180000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.713364')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.907 [trade-worker-21] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #21: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(21 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.150000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.715601')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.910 [trade-worker-1] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #1: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(1 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 50, 182.450000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:01', TIMESTAMP '2026-02-23 00:12:11.703981')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.912 [trade-worker-11] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #11: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(11 AS BIGINT), CAST(1002 AS BIGINT), 'AAPL', 15, 182.900000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:09', TIMESTAMP '2026-02-23 00:12:11.72596')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.912 [trade-worker-11] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:13:40.914 [trade-worker-5] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #5: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(5 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 5, 720.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:04', TIMESTAMP '2026-02-23 00:12:11.728569')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.916 [trade-worker-23] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #23: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(23 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.170000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.711563')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.916 [trade-worker-23] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:13:40.920 [trade-worker-4] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #4: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(4 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 100, 410.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:03', TIMESTAMP '2026-02-23 00:12:11.706728')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.924 [trade-worker-7] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #7: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(7 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 200, 1450.750000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:05', TIMESTAMP '2026-02-23 00:12:11.705646')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.929 [trade-worker-13] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #13: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(13 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 75, 2850.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:10', TIMESTAMP '2026-02-23 00:12:11.722835')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.933 [trade-worker-18] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #18: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(18 AS BIGINT), CAST(1009 AS BIGINT), 'TCS', 40, 4100.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:13', TIMESTAMP '2026-02-23 00:12:11.709038')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.935 [trade-worker-19] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #19: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(19 AS BIGINT), CAST(1010 AS BIGINT), 'AAPL', 100, 184.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.728569')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.935 [trade-worker-14] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #14: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(14 AS BIGINT), CAST(1007 AS BIGINT), 'HDFCBANK', 60, 1650.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:11', TIMESTAMP '2026-02-23 00:12:11.68598')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.945 [trade-worker-17] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #17: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(17 AS BIGINT), CAST(1008 AS BIGINT), 'ICICIBANK', 90, 980.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:13', TIMESTAMP '2026-02-23 00:12:11.72395')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.949 [trade-worker-2] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #2: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(2 AS BIGINT), CAST(1002 AS BIGINT), 'GOOGL', 10, 2750.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:02', TIMESTAMP '2026-02-23 00:12:11.717835')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.951 [trade-worker-17] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #47: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(47 AS BIGINT), CAST(1009 AS BIGINT), 'TCS', 10, 4105.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:31', TIMESTAMP '2026-02-23 00:12:11.730369')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.956 [trade-worker-14] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #46: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(46 AS BIGINT), CAST(1008 AS BIGINT), 'ICICIBANK', 100, 982.500000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:30', TIMESTAMP '2026-02-23 00:12:11.735344')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.959 [trade-worker-19] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #45: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(45 AS BIGINT), CAST(1007 AS BIGINT), 'HDFCBANK', 30, 1655.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:29', TIMESTAMP '2026-02-23 00:12:11.735344')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.962 [trade-worker-18] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #44: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(44 AS BIGINT), CAST(1006 AS BIGINT), 'RELIANCE', 40, 2860.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:28', TIMESTAMP '2026-02-23 00:12:11.738142')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.964 [trade-worker-13] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #43: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(43 AS BIGINT), CAST(1005 AS BIGINT), 'INFY', 50, 1455.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:27', TIMESTAMP '2026-02-23 00:12:11.738142')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.964 [trade-worker-7] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #42: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(42 AS BIGINT), CAST(1004 AS BIGINT), 'TSLA', 15, 723.500000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:26', TIMESTAMP '2026-02-23 00:12:11.741288')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.964 [trade-worker-4] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #41: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(41 AS BIGINT), CAST(1003 AS BIGINT), 'MSFT', 200, 413.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:25', TIMESTAMP '2026-02-23 00:12:11.741288')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.964 [trade-worker-23] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #40: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(40 AS BIGINT), CAST(1020 AS BIGINT), 'TCS', 25, 4102.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1020 symbol=TCS requested=25', TIMESTAMP '2026-02-20 09:15:24', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.975 [trade-worker-5] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #39: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(39 AS BIGINT), CAST(1019 AS BIGINT), 'ICICIBANK', 70, 981.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:23', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.975 [trade-worker-11] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #38: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(38 AS BIGINT), CAST(1018 AS BIGINT), 'HDFCBANK', 50, 1652.000000, 'SELL', 'REJECTED', 'Insufficient position: account=1018 symbol=HDFCBANK requested=50', TIMESTAMP '2026-02-20 09:15:22', TIMESTAMP '2026-02-23 00:12:11.744693')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.979 [trade-worker-1] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #37: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(37 AS BIGINT), CAST(1017 AS BIGINT), 'RELIANCE', 100, 2855.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:21', TIMESTAMP '2026-02-23 00:12:11.747591')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.984 [trade-worker-21] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #36: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(36 AS BIGINT), CAST(1016 AS BIGINT), 'INFY', 300, 1453.250000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:20', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.985 [trade-worker-24] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #35: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(35 AS BIGINT), CAST(1015 AS BIGINT), 'TSLA', 8, 722.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:19', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.987 [trade-worker-20] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #34: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(34 AS BIGINT), CAST(1014 AS BIGINT), 'MSFT', 120, 412.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:18', TIMESTAMP '2026-02-23 00:12:11.749603')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.989 [trade-worker-15] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #33: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(33 AS BIGINT), CAST(1013 AS BIGINT), 'NVDA', 60, 681.750000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:17', TIMESTAMP '2026-02-23 00:12:11.751707')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.991 [trade-worker-16] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #32: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(32 AS BIGINT), CAST(1012 AS BIGINT), 'AMZN', 15, 3301.500000, 'SELL', 'REJECTED', 'Insufficient position: account=1012 symbol=AMZN requested=15', TIMESTAMP '2026-02-20 09:15:16', TIMESTAMP '2026-02-23 00:12:11.751707')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.992 [trade-worker-3] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #31: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(31 AS BIGINT), CAST(1011 AS BIGINT), 'AMZN', 20, 3300.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:15', TIMESTAMP '2026-02-23 00:12:11.753718')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.995 [trade-worker-22] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #30: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(30 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.240000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.690701')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:40.995 [trade-worker-6] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #29: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(29 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.230000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.755728')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.000 [trade-worker-10] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #28: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(28 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.220000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.756735')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.000 [trade-worker-12] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #27: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(27 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.210000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.758522')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.000 [trade-worker-9] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #26: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(26 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.200000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.758522')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.000 [trade-worker-8] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #25: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(25 AS BIGINT), CAST(1001 AS BIGINT), 'AAPL', 5, 184.190000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:14', TIMESTAMP '2026-02-23 00:12:11.761515')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.000 [trade-worker-14] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #50: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(50 AS BIGINT), CAST(1012 AS BIGINT), 'NVDA', 25, 685.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:34', TIMESTAMP '2026-02-23 00:12:11.763438')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.008 [trade-worker-17] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #49: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(49 AS BIGINT), CAST(1011 AS BIGINT), 'AMZN', 5, 3305.000000, 'BUY', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:33', TIMESTAMP '2026-02-23 00:12:11.763438')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.008 [trade-worker-2] ERROR c.t.processor.TradeProcessor - DB persistence failed for trade #48: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TRADES(TRADE_ID) ( /* key:0 */ CAST(48 AS BIGINT), CAST(1010 AS BIGINT), 'AAPL', 50, 185.000000, 'SELL', 'ACCEPTED', NULL, TIMESTAMP '2026-02-20 09:15:32', TIMESTAMP '2026-02-23 00:12:11.730369')"; SQL statement:
+INSERT INTO trades
+  (trade_id, account_id, symbol, quantity, price, side,
+   status, rejection_reason, trade_timestamp)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [23505-224]
+2026-02-23 00:13:41.008 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 222ms — Accepted: 0, Rejected: 0, Errors: 50
+2026-02-23 00:13:41.013 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:13:41.104 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:13:41.104 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:13:41.104 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:13:41.107 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:13:41.332 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:15:59.456 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:15:59.459 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:15:59.907 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:15:59.908 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:15:59.933 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:15:59.935 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:15:59.936 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:15:59.944 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:15:59.944 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:16:00.007 [trade-worker-20] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1002 symbol=AAPL wanted=10 have=0
+2026-02-23 00:16:00.008 [trade-worker-6] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1002 symbol=GOOGL wanted=5 have=0
+2026-02-23 00:16:00.009 [trade-worker-12] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1005 symbol=INFY wanted=100 have=0
+2026-02-23 00:16:00.009 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1003 symbol=MSFT wanted=50 have=0
+2026-02-23 00:16:00.034 [trade-worker-10] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:16:00.039 [trade-worker-4] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:16:00.042 [trade-worker-8] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:16:00.089 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 145ms — Accepted: 43, Rejected: 7, Errors: 0
+2026-02-23 00:16:00.091 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:16:00.206 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:16:00.207 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:16:00.207 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:16:00.209 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:16:00.251 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:17:27.151 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:17:27.152 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:17:27.497 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:17:27.502 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:17:27.519 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:17:27.522 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:17:27.523 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:17:27.536 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:17:27.538 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:17:27.596 [trade-worker-3] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=AAPL wanted=20 have=15
+2026-02-23 00:17:27.596 [trade-worker-6] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1002 symbol=GOOGL wanted=5 have=0
+2026-02-23 00:17:27.608 [trade-worker-16] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:17:27.622 [trade-worker-18] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:17:27.625 [trade-worker-13] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:17:27.664 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 126ms — Accepted: 45, Rejected: 5, Errors: 0
+2026-02-23 00:17:27.668 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:17:27.767 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:17:27.767 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:17:27.767 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:17:27.769 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:17:27.798 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:24:28.583 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:24:28.588 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:24:29.074 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:24:29.074 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:24:29.112 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:24:29.113 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:24:29.116 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:24:29.122 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:24:29.122 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:24:29.204 [trade-worker-10] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1004 symbol=TSLA wanted=5 have=5
+2026-02-23 00:24:29.204 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1003 symbol=MSFT wanted=50 have=0
+2026-02-23 00:24:29.204 [trade-worker-16] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1006 symbol=RELIANCE wanted=25 have=0
+2026-02-23 00:24:29.205 [trade-worker-3] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=AAPL wanted=20 have=5
+2026-02-23 00:24:29.224 [trade-worker-15] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:24:29.234 [trade-worker-1] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:24:29.241 [trade-worker-7] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:24:29.289 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 167ms — Accepted: 43, Rejected: 7, Errors: 0
+2026-02-23 00:24:29.289 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:24:29.877 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:24:29.882 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:24:29.884 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:24:29.894 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:24:29.963 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
+2026-02-23 00:29:04.121 [main] INFO  c.t.engine.TransactionEngineMain - Starting Transaction Processing Engine
+2026-02-23 00:29:04.124 [main] INFO  c.t.engine.TransactionEngineMain - Trade file: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:29:04.583 [main] INFO  com.tradingdesk.db.DatabaseManager - Connected to H2 database at jdbc:h2:./trading_engine_db;MODE=MySQL;AUTO_SERVER=TRUE
+2026-02-23 00:29:04.584 [main] INFO  com.tradingdesk.db.DatabaseManager - Initializing database schema …
+2026-02-23 00:29:04.608 [main] INFO  com.tradingdesk.db.DatabaseManager - Schema ready (tables: accounts, trades, positions)
+2026-02-23 00:29:04.610 [main] INFO  c.t.processor.TradeProcessor - TradeProcessor initialized with 24 worker threads
+2026-02-23 00:29:04.612 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loading trades from: C:\Users\HarshSingh\Desktop\New folder - Copy (2)\trades.csv
+2026-02-23 00:29:04.629 [main] INFO  c.tradingdesk.loader.TradeFileLoader - Loaded 50 trades (0 lines skipped/invalid)
+2026-02-23 00:29:04.630 [main] INFO  c.t.processor.TradeProcessor - Submitting 50 trades to thread pool …
+2026-02-23 00:29:04.737 [trade-worker-9] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1003 symbol=MSFT wanted=50 have=100
+2026-02-23 00:29:04.737 [trade-worker-15] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=NVDA wanted=10 have=30
+2026-02-23 00:29:04.737 [trade-worker-6] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1002 symbol=GOOGL wanted=5 have=0
+2026-02-23 00:29:04.737 [trade-worker-16] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1006 symbol=RELIANCE wanted=25 have=0
+2026-02-23 00:29:04.738 [trade-worker-3] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1001 symbol=AAPL wanted=20 have=5
+2026-02-23 00:29:04.770 [trade-worker-20] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1012 symbol=AMZN wanted=15 have=0
+2026-02-23 00:29:04.794 [trade-worker-17] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1018 symbol=HDFCBANK wanted=50 have=0
+2026-02-23 00:29:04.801 [trade-worker-18] WARN  c.t.portfolio.PortfolioStateManager - SELL REJECTED (insufficient qty) → account=1020 symbol=TCS wanted=25 have=0
+2026-02-23 00:29:04.899 [main] INFO  c.t.processor.TradeProcessor - Processing complete in 267ms — Accepted: 42, Rejected: 8, Errors: 0
+2026-02-23 00:29:04.901 [main] INFO  c.tradingdesk.report.ReportGenerator - Generating summary reports …
+2026-02-23 00:29:05.603 [main] INFO  c.tradingdesk.report.ReportGenerator - All reports generated.
+2026-02-23 00:29:05.605 [main] INFO  c.t.engine.TransactionEngineMain - Engine completed successfully.
+2026-02-23 00:29:05.605 [main] INFO  c.t.processor.TradeProcessor - Shutting down trade processor …
+2026-02-23 00:29:05.608 [main] INFO  c.t.processor.TradeProcessor - Trade processor shut down.
+2026-02-23 00:29:05.638 [main] INFO  com.tradingdesk.db.DatabaseManager - Database connection closed.
